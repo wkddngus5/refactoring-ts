@@ -16,6 +16,13 @@ class Rental {
     public getMovie(): Movie {
         return this._movie;
     }
+
+    public getCharge(): number {
+        return this._movie.getCharge( this._daysRented );
+    }
+    public getFrequentRenterPoints(): number {
+        return this._movie.getFrequentRenterPoints( this._daysRented );
+    }
 }
 
 export default Rental;
